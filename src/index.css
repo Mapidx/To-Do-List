@@ -1,13 +1,130 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  /* background-image: -webkit-linear-gradient(73deg, #B7C9F2 50%, #9195F6 50%);    */
+  background-color: #9195f6;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 50rem;
+  margin: auto;
+  margin-top: 6.25rem;
+  padding: 5px 5px;
+  border-radius: 1rem;
+  margin-bottom: 6rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.top {
+  /* display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  margin-left: 690px;
+}
+
+.heading {
+  font-size: 24px;
+  color: #9195f6;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.clear {
+  width: 6rem;
+  height: 3rem;
+  background-color: #9195f6;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h1,
+h3 {
+  color: #9195f6;
+}
+
+.adding {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.adding input {
+  width: 90%;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 2%;
+  border-radius: 0.5rem;
+  color: #9195f6;
+  font-weight: 400;
+  border: 1px solid black;
+}
+
+button {
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #9195f6;
+  color: #fff;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+button .clearAll {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+button .clearAll:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+li {
+  padding-left: 15px;
+  margin-top: 19px;
+  margin-bottom: 15px;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: #9195f6;
+  font-weight: 800;
+  border-bottom-right-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  color: grey;
+  font-size: 20px;
+}
+
+i:hover {
+  color: red;
 }
