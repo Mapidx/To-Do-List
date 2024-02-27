@@ -19,6 +19,12 @@ function App() {
     setListTodo([...newListTodo]);
   };
 
+  const editListItem = (key) => {
+    let newListTodo = [...listTodo];
+    newListTodo[key] = window.prompt("Edit the Task: ");
+    setListTodo(newListTodo);
+  };
+
   const [currentDay, setCurrentDay] = useState("");
   const [currentDate, setCurrentDate] = useState("");
 
@@ -46,12 +52,16 @@ function App() {
 
   return (
     <div className="container">
-      <h1>{currentDay}</h1>
+      <div className="head">
+        <h1>{currentDay}</h1>
+        <img src="./images/banner.webp" alt="banner" />
+      </div>
       <h3>{currentDate}</h3>
+
       <TodoInput addList={addList} clearList={clearItem} />
       <div className="heading">
         <h1>TO-DO LISTS</h1>
-        <hr />
+        <div className="border"></div>
         {listTodo.map((listItem, i) => {
           return (
             <TodoList
@@ -59,6 +69,7 @@ function App() {
               index={i}
               item={listItem}
               deleteItem={deleteListItem}
+              editItem={editListItem}
             />
           );
         })}

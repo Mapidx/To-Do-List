@@ -4,17 +4,7 @@ const TodoInput = (todo) => {
   const [inputText, setInputText] = useState("");
   return (
     <div className="cont">
-      <div className="top">
-        <button
-          className="clear"
-          onClick={() => {
-            todo.clearList();
-            setInputText("");
-          }}
-        >
-          <span className="clearAll">Clear All</span>
-        </button>
-      </div>
+      <div className="top"></div>
       <div className="adding">
         <input
           type="text"
@@ -34,6 +24,15 @@ const TodoInput = (todo) => {
           }}
         >
           +
+        </button>
+        <button
+          className="clear"
+          onClick={() => {
+            todo.clearList();
+            setInputText("");
+          }}
+        >
+          <span className="clearAll">Clear All</span>
         </button>
       </div>
     </div>
