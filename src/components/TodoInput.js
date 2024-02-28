@@ -8,7 +8,7 @@ const TodoInput = (todo) => {
       <div className="adding">
         <input
           type="text"
-          className=""
+          className="todobase"
           id="todo"
           placeholder="Enter your TODO task"
           value={inputText}

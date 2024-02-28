@@ -21,8 +21,13 @@ function App() {
 
   const editListItem = (key) => {
     let newListTodo = [...listTodo];
-    newListTodo[key] = window.prompt("Edit the Task: ");
-    setListTodo(newListTodo);
+    const editedTask = window.prompt("Edit the Task: ", newListTodo[key]);
+    if (editedTask !== "") {
+      newListTodo[key] = editedTask;
+      setListTodo(newListTodo);
+    } else {
+      prompt("Enter a task name please!");
+    }
   };
 
   const [currentDay, setCurrentDay] = useState("");
@@ -53,10 +58,12 @@ function App() {
   return (
     <div className="container">
       <div className="head">
-        <h1>{currentDay}</h1>
-        <img src="./images/banner.webp" alt="banner" />
+        <h1>
+          {currentDay}
+          <h3>{currentDate}</h3>
+        </h1>
+        <img src="./images/mapidxblack.png" alt="banner" />
       </div>
-      <h3>{currentDate}</h3>
 
       <TodoInput addList={addList} clearList={clearItem} />
       <div className="heading">
