@@ -6,11 +6,11 @@ const TodoList = (todo) => {
       {todo.item}
       <div className="itag">
         <i
-          class="fa-solid fa-pen-clip"
+          className="fa-solid fa-pen-clip"
           onClick={(e) => todo.editItem(todo.index)}
         ></i>
         <i
-          class="fa-solid fa-trash"
+          className="fa-solid fa-trash"
           onClick={(e) => {
             todo.deleteItem(todo.index);
           }}

@@ -10,7 +10,12 @@ function App() {
   };
 
   const clearItem = () => {
-    setListTodo([]);
+    const permission = window.confirm("Are you sure you want to erase all");
+    if (permission) {
+      setListTodo([]);
+    } else {
+      return "";
+    }
   };
 
   const deleteListItem = (key) => {
@@ -22,7 +27,7 @@ function App() {
   const editListItem = (key) => {
     let newListTodo = [...listTodo];
     const editedTask = window.prompt("Edit the Task: ", newListTodo[key]);
-    if (editedTask !== "") {
+    if (editedTask) {
       newListTodo[key] = editedTask;
       setListTodo(newListTodo);
     } else {
@@ -56,31 +61,35 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="head">
-        <h1>
-          {currentDay}
-          <h3>{currentDate}</h3>
-        </h1>
-        <img src="./images/mapidxblack.png" alt="banner" />
-      </div>
+    <div className="myName">
+      <div className="container">
+        <div className="head">
+          <div className="date">
+            <h1>{currentDay}</h1>
+            <h3>{currentDate}</h3>
+          </div>
 
-      <TodoInput addList={addList} clearList={clearItem} />
-      <div className="heading">
-        <h1>TO-DO LISTS</h1>
-        <div className="border"></div>
-        {listTodo.map((listItem, i) => {
-          return (
-            <TodoList
-              key={i}
-              index={i}
-              item={listItem}
-              deleteItem={deleteListItem}
-              editItem={editListItem}
-            />
-          );
-        })}
+          <img src="./images/mapidxblack.png" alt="banner" />
+        </div>
+
+        <TodoInput addList={addList} clearList={clearItem} />
+        <div className="heading">
+          <h1>TO-DO LISTS</h1>
+          <div className="border"></div>
+          {listTodo.map((listItem, i) => {
+            return (
+              <TodoList
+                key={i}
+                index={i}
+                item={listItem}
+                deleteItem={deleteListItem}
+                editItem={editListItem}
+              />
+            );
+          })}
+        </div>
       </div>
+      <div className="name">Dipam Pradhan</div>
     </div>
   );
 }

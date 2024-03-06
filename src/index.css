@@ -20,7 +20,23 @@ body {
   padding: 5px 5px;
   border-radius: 1rem;
   margin-bottom: 6rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+@media screen and (max-width: 285px) {
+  .heading h1 {
+    font-size: 25px;
+    font-weight: 400px;
+  }
+
+  .container h1 {
+    font-size: 25px;
+    font-weight: 400px;
+  }
+  .container h3 {
+    font-size: 18px;
+    font-weight: 400px;
+  }
 }
 
 h1 {
@@ -52,6 +68,11 @@ h1 {
   border-bottom: 3px solid #9195f6;
 }
 
+@media screen and (max-width: 493px) {
+  .clear {
+    display: none;
+  }
+}
 .clear {
   width: 6rem;
   height: 3rem;
@@ -153,6 +174,11 @@ i:hover {
   color: red;
 }
 
+@media screen and (max-width: 219px) {
+  img {
+    display: none;
+  }
+}
 img {
   height: 100px;
   margin-top: -10px;
@@ -165,4 +191,14 @@ img {
 
 .itag i {
   margin-right: 18px;
+}
+
+.name {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  color: white;
+  align-items: center;
+  text-align: center;
 }
